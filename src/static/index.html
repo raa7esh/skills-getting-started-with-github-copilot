@@ -17,7 +17,26 @@
         <h3>Available Activities</h3>
         <div id="activities-list">
           <!-- Activities will be loaded here -->
-          <p>Loading activities...</p>
+          <p class="info-text">Loading activities...</p>
+
+          <!-- Template for activity cards; JS should clone and fill details -->
+          <template id="activity-template">
+            <div class="activity-card">
+              <h4 class="activity-title">Activity Name</h4>
+              <p class="activity-description">Short description of the activity.</p>
+              <p class="activity-schedule"><strong>Schedule:</strong> <span class="schedule-value">TBD</span></p>
+              <p class="activity-capacity"><strong>Capacity:</strong> <span class="capacity-value">0</span></p>
+
+              <!-- Participants section (new) -->
+              <div class="participants-section" aria-live="polite">
+                <h5 class="participants-heading">Participants</h5>
+                <ul class="participants-list">
+                  <!-- JS will insert <li>email@domain</li> items here -->
+                </ul>
+                <p class="no-participants" aria-hidden="true">No participants yet.</p>
+              </div>
+            </div>
+          </template>
         </div>
       </section>
 
